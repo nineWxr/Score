@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="main"
+            type="com.nine.score.MainViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        tools:context=".MainScoreActivity"
+        tools:layout_editor_absoluteY="1dp">
+
+        <TextView
+            android:id="@+id/tv_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/AName"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline14"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline10"
+
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_a_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(main.getANumber())}"
+            android:textSize="44sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline15"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline14"
+            tools:ignore="MissingConstraints"
+            tools:text="22" />
+
+
+        <Button
+            android:id="@+id/btn_a_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="@{()->main.addAScore(1)}"
+            android:text="@string/_1"
+            app:layout_constraintBottom_toTopOf="@+id/guideline16"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline15"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_a_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="@{()->main.addAScore(2)}"
+            android:text="@string/_2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline17"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline16"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_a_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="@{()->main.addAScore(3)}"
+            android:text="@string/_3"
+            app:layout_constraintBottom_toTopOf="@+id/guideline18"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline17"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/iv_revert"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->main.revertScore()}"
+            android:src="@drawable/ic_baseline_reply_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline11"
+            app:layout_constraintEnd_toStartOf="@+id/guideline13"
+            app:layout_constraintStart_toStartOf="@+id/guideline8"
+            app:layout_constraintTop_toTopOf="@+id/guideline18"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/tv_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/BName"
+            android:textSize="22sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline14"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline10"
+            tools:ignore="MissingConstraints" />
+
+
+        <TextView
+            android:id="@+id/tv_b_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(main.getBNumber)}"
+            android:textSize="44sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline15"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline14"
+            tools:ignore="MissingConstraints"
+            tools:text="22" />
+
+
+        <Button
+            android:id="@+id/btn_b_1"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="@{()->main.addBScore(1)}"
+            android:text="@string/_1"
+            app:layout_constraintBottom_toTopOf="@+id/guideline16"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline15"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_b_2"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="@{()->main.addBScore(2)}"
+            android:text="@string/_2"
+            app:layout_constraintBottom_toTopOf="@+id/guideline17"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline16"
+            tools:ignore="MissingConstraints" />
+
+        <Button
+            android:id="@+id/btn_b_3"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:onClick="@{()->main.addBScore(3)}"
+            android:text="@string/_3"
+            app:layout_constraintBottom_toTopOf="@+id/guideline18"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline17"
+            tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/iv_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="@{()->main.reSetScore()}"
+            android:src="@drawable/ic_baseline_replay_24"
+            app:layout_constraintBottom_toTopOf="@+id/guideline11"
+            app:layout_constraintEnd_toStartOf="@+id/guideline12"
+            app:layout_constraintStart_toStartOf="@+id/guideline13"
+            app:layout_constraintTop_toTopOf="@+id/guideline18"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.1" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.9" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.85" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

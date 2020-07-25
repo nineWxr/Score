@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Score</string>
+    <string name="AName">A队</string>
+    <string name="BName">B队</string>
+    <string name="_1">+1</string>
+    <string name="_2">+2</string>
+    <string name="_3">+3</string>
+</resources>
